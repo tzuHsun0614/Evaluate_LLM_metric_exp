@@ -13,9 +13,42 @@ Uses Docker
 --task having two options, QA for Question answering model and SUM for Text Summarization model
 
 --model having two cases
-QA model having options BERT and ROBERTA
-SUM model having options BART and booksum
+
+QA model having options:
+
+-BERT
+-ROBERTA
+
+SUM model having options:
+
+-BART
+-booksum
 
 
 Not sure if the result needs two model running on one dataset or each model evaluate it's validation data
 so in presentation I'll present models running same dasaset, but in program it'll be evaluate by it's own validation set
+
+
+
+# References
+
+QA models:
+
+
+[RoBERTa](https://huggingface.co/deepset/roberta-base-squad2)
+[BERT](https://huggingface.co/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad)
+
+Dataset:
+
+[SQuAD_v2](https://huggingface.co/spaces/evaluate-metric/squad_v2)
+[SQuAD](https://huggingface.co/datasets/rajpurkar/squad)
+
+QA models: Text Summarization
+
+[BART](https://huggingface.co/sshleifer/distilbart-xsum-12-1)
+[t5-small-booksum](https://huggingface.co/cnicu/t5-small-booksum)
+
+Dataset:
+
+[CNN_DailyMail](https://huggingface.co/datasets/abisee/cnn_dailymail)
+[BookSUM](https://huggingface.co/datasets/kmfoda/booksum)
