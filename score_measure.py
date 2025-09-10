@@ -15,7 +15,7 @@ BOOL_NO_ANSWER = False
 TASK_TYPE = "question-answering"
 METRIC = ""
 
-#以為兩種LLM差不多 我實在是錯得離譜
+
 def gen_chunk(dataset, step):
     for i in range(0, len(dataset), step):
         yield dataset[i:i+step]
@@ -138,6 +138,8 @@ if __name__ == "__main__":
             BOOL_NO_ANSWER = True
             METRIC = "squad_v2"
         qa_model_measure()
+        else:
+            print("maybe you typed wrong model name")
     elif (args.task == 'SUM'):
 
         TASK_TYPE = "summarization"
@@ -153,5 +155,7 @@ if __name__ == "__main__":
             DATASET_NAME = "kmfoda/booksum"
             BOOL_NO_ANSWER = False
         summarization_model_measure()
+        else:
+            print("maybe you typed wrong model name")
     else:
        print("Only two tasks are supported: QA (Question Answering Model) and SUM (Text Summarization Model)")
