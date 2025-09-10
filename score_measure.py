@@ -1,4 +1,5 @@
 import os, math
+# Since my computer keeps throwing warnings, as document says, I set this to false to disable parallelism
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 from datasets import load_dataset
@@ -75,6 +76,7 @@ def summarization_model_measure():
     model=MODEL_NAME,
     device=0,
     )
+    # My cuda keeps throwing errors, might be because of the limited memory
     LLM.tokenizer.model_max_length = getattr(LLM.model.config, "max_position_embeddings", 1024)
     
     rouge_metric = load("rouge")
