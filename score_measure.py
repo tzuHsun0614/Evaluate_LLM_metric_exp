@@ -99,7 +99,7 @@ def summarization_model_measure():
         
         
         
-    rouge_scores = rouge_metric.compute(use_stemmer=True, rouge_types=["rouge1","rouge2","rougeL","rougeLsum"])
+    rouge_scores = rouge_metric.compute(use_stemmer=True, rouge_types=["rouge1","rouge2","rougeL"])
     bs = bertscore_metric.compute(predictions=[], references=[], lang="en", rescale_with_baseline=True)  
     bertscore = {
         "precision": sum(bs["precision"])/len(bs["precision"]),

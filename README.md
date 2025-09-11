@@ -43,7 +43,7 @@ Dataset:
 [SQuAD_v2](https://huggingface.co/spaces/evaluate-metric/squad_v2)
 [SQuAD](https://huggingface.co/datasets/rajpurkar/squad)
 
-QA models: Text Summarization
+Text Summarization models:
 
 [BART](https://huggingface.co/sshleifer/distilbart-xsum-12-1)
 [t5-small-booksum](https://huggingface.co/cnicu/t5-small-booksum)
